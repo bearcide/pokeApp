@@ -21,7 +21,8 @@ const getNumRandom = () => {
   }
 
 const obtenerPokePropio = ()=>{
-    const num = input.value;
+    const num = input.value
+    console.log(num);
     
     axios.get(`https://pokeapi.co/api/v2/pokemon/${num}`).then((res)=>{
 
@@ -33,6 +34,7 @@ const obtenerPokePropio = ()=>{
         namePokeProp.innerHTML = res.name;
         pokePropAtaque.innerHTML = res.stats[0].base_stat;
     })
+    console.log(imgPokeProp);
 }
 
 const obtenerPokeRival = () =>{
@@ -55,9 +57,13 @@ const obtenerPokeRival = () =>{
 
 const combate = ()=>{
     const ataqueRival = parseInt(poke2Ataque.textContent);
-    const ataquePropio = pareseInt(pokePropAtaque.textContent);
+    const ataquePropio = parseInt(pokePropAtaque.textContent);
 
-
+    if(ataqueRival > ataquePropio) {
+        alert("Tu pokemon murio :(");
+    } else {
+        alert('Ganaste!');
+    }
 }
 
 window.addEventListener('load', obtenerPokeRival)
