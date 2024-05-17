@@ -61,8 +61,10 @@ const combate = ()=>{
 
     if(ataqueRival > ataquePropio) {
         alert("Tu pokemon murio :(");
-    } else {
+    } else if(ataqueRival < ataquePropio){
         alert('Ganaste!');
+    } else {
+        alert('Empate...');
     }
 }
 
