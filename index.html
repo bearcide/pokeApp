@@ -3,42 +3,84 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ejercicio JS</title>
-        <link rel="stylesheet" href="./style.css">
+        <title>PokeApp</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
+    
     <body>
+
+        <!-- Cabecera -->
+        <header>
+            <h1>PokeApp</h1>
+        </header>
         
-        <div class="stats" id="poke-rival">
-            <h3 id="nombrePoke-rival"></h3>
-            <p id="tipoRival"></p>
-            <p>Ataque: <span id="ataqueRival"></span></p>
-        </div>
+        <!-- Seccion principal -->
+        <main class="main__section">
+            <section class="battle__zone">
+                <div class="stats" id="poke-rival">
+                    <h3 id="nombrePoke-rival"></h3>
+                    <p id="tipoRival"></p>
+                    <p>Ataque: <span id="ataqueRival"></span></p>
+                </div>
+        
+                <div class="arena">
+                    <img id="poke2" src="" alt="">
+                    <img id="pokeProp" src="" alt="">
+                </div>
+        
+                <div class="stats" id="poke-propio">
+                    <h3 id="nombrePoke-Prop"></h3>
+                    <p id="tipoProp"></p>
+                    <p>Ataque: <span id="ataqueProp"></span></p>
+                </div>
+            </section>
+            
+            <section class="user__interaction">
+                
+                <input placeholder="Ingrese el numero de su pokemon!" class="input" type="text" id="input" max="999" min="1">
 
-        <div class="arena">
-            <img id="poke2" src="" alt="">
-            <img id="pokeProp" src="" alt="">
-        </div>
+                <div class="battle__zone__buttons">
 
-        <div class="stats" id="poke-propio">
-            <h3 id="nombrePoke-Prop"></h3>
-            <p id="tipoProp"></p>
-            <p>Ataque: <span id="ataqueProp"></span></p>
-        </div>
+                    <button class="button" id="btn-poke">Elegir Pokemon</button>
+                    <button class="button" id="btn-combate">Ataque</button>
 
-        <div>
-            <input id="input" max="999" type="number">
-            <button id="btn-poke">Elegir poke</button>
-            <button id="btn-combate">Ataque</button>
-        </div>
-        <script src="./app.js"></script>
+                </div>
+                    
+                </div>
+            </section>
+
+        </main>
+                
+        <!-- scripts -->
+        <script src="app.js"></script>
+
     </body>
+
+    <!-- pie de pagina -->
+    <footer> 
+        <p>© 2022 - Todos los derechos reservados</p>
+
+        <div class="creditos">
+            <p>Elaborado por:</p>
+            <ul>
+                <li>Angel Hazel Tapia Ledesma</li>
+                <li>Emilio Garcia Riba</li>
+                <li>Diego Medina Ramirez</li>
+                <li>Miguel Alfredo Ortega Teloxa</li>
+                <li>Brayan Lopez Ramires</li>
+                <li>Marco Lechuga Cisneros</li>
+            </ul>
+        </div>
+        
+    </footer>
 </html>
 
 <!--
-    Garcia Riba Emilio 
-    Medina Ramirez Diego 
-    Tapia Ledezma Angel 
-    Alfredo Ortega Teloxa Miguel 
-    Lopez Ramirez Brayan 
+    Emilio Garcia Riba
+    Diego Medina Ramirez
+    Angel Tapia Ledezma
+    Miguel Alfredo Ortega Teloxa
+    Brayan Lopez Ramirez
     -->
